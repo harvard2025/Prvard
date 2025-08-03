@@ -68,14 +68,6 @@ Prvard is inspired by real university systems and design — it lets you create 
 
 ---
 
-## 💻 Code & Collaboration
-
-- Each class can include:
-  - A **GitHub link** for collaboration.
-  - A **Codespace** link (e.g., cs50.dev) for live coding.
-
----
-
 ## 🚀 Why Prvard is Unique
 
 Prvard combines the **structure of a real university**, a **full student email system**, detailed **user profiles**, **class management**, and **community tools** — all under one elegant, themed platform.
@@ -86,8 +78,8 @@ It’s designed to give students the feeling that they’re truly part of a real
 
 ## 📫 Need Help?
 
-This project is created by **Prroer**.  
-If you need any help, please email: [prvard@gmail.com](mailto:prvard@gmail.com).
+This project is created by **Abdelrhman Ahmed**.  
+If you need any help, please email: [prro.code@gmail.com](mailto:prro.code@gmail.com).
 
 ---
 
