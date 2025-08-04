@@ -1,6 +1,6 @@
-Django==5.2.4
 gunicorn
 psycopg2-binary
-djangorestframework
 markdown
 whitenoise
+Django>=4.2,<5s
+djangorestframework>=3.14
