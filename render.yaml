@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: Prvard
+    env: python
+    pythonVersion: "3.10.9"  # نسخة بايثون المطلوبة، لازم تكون كاملة مثل 3.10.9
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn prvard.wsgi"
