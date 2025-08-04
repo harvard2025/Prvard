@@ -1,11 +1,6 @@
-Django>=5.0
-djangorestframework>=3.14
+Django==5.2.4
 gunicorn
 psycopg2-binary
+djangorestframework
 markdown
-datetime
-gunicorn
-whitenoise
-Django>=4.2,<5
-gunicorn
 whitenoise
