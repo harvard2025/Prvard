@@ -10,3 +10,5 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: prvard.settings
+      - key: PYTHON_VERSION
+        value: 3.10.9
