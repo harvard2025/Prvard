@@ -133,22 +133,23 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # هذا مجلد لجمع ملفات static
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+  # هذا مجلد لجمع ملفات static
 
 # Optional: إضافة مسارات إضافية للـ static files (إن وجدت)
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "static",  # لو عندك مجلد اسمه static في الجذر
 ]
+
 
 
 
 MIDDLEWARE = [
-    # ...
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # لتقديم ملفات static في الإنتاج
-    # ...
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # باقي الـ middleware
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

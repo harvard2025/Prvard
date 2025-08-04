@@ -6,3 +6,6 @@ markdown
 datetime
 gunicorn
 whitenoise
+Django>=4.2,<5
+gunicorn
+whitenoise
