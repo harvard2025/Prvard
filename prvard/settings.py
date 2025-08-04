@@ -132,9 +132,14 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+import os
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-  # هذا مجلد لجمع ملفات static
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'prvard_main/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Optional: إضافة مسارات إضافية للـ static files (إن وجدت)
 STATICFILES_DIRS = [

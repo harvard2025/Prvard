@@ -1,9 +1,12 @@
 services:
   - type: web
     name: prvard
-    env: python
-    python_version: "3.10.9"
-    build_command: |
+    runtime: python
+    buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-    start_command: gunicorn prvard.wsgi
+      python manage.py migrate
+    startCommand: gunicorn prvard.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: prvard.settings
