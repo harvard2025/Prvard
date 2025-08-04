@@ -53,17 +53,28 @@ INSTALLED_APPS = [
 # 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 # 
 # ]
-
+# 
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'whitenoise.middleware.WhiteNoiseMiddleware',  # إذا تستخدم Whitenoise
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',  # مهم جداً
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # إذا تستخدم Whitenoise
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # لازم يكون هنا!
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  # مهم جداً
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 
 ROOT_URLCONF = 'prvard.urls'
@@ -175,15 +186,19 @@ LOGGING = {
 
 
 
-
 from pathlib import Path
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'prvard_main' / 'static']
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # هذا المكان اللي بتجمع فيه كل ملفات static قبل النشر
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'prvard_main' / 'static',  # مكان ملفات static اللي تعمل عليها أثناء التطوير
+]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
