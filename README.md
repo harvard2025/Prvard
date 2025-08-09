@@ -1,6 +1,6 @@
 # Prvard
 
-#### 📽️ Video Demo: [Watch here](https://youtube.com)
+#### 📽️ Video Demo: [Watch here](https://youtu.be/-wdg_Tx0wjI?si=RiH44o4Jb0NFy9jn)
 
 ---
 
